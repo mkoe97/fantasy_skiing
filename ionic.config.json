@@ -1,0 +1,7 @@
+{
+  "name": "fantasy_skiing",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
