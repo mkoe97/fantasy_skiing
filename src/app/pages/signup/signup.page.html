@@ -1,0 +1,38 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title">Wilkommen</ion-title>
+    <p class="subtitle"> Neuen Account erstellen </p>
+  </div>
+
+  <form>
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input class="input" placeholder="Username" name="username" [(ngModel)]="username"></ion-input>
+          <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input class="input" placeholder="Email" name="email" [(ngModel)]="email"></ion-input>
+          <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input class="input" placeholder="Passwort" name="password" [(ngModel)]="password" type="password"></ion-input>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input class="input" placeholder="Passwort Wiederholen" name="passwordwh" [(ngModel)]="passwordwh" type="password"></ion-input>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div class="signinlink">
+        <p><a [routerLink]="['/login']">Bereits ein Account vorhanden</a></p>
+      </div>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </div>
+    <div class="ion-button-container">
+      <ion-button (click)="createGamer()">
+        Account erstellen
+      </ion-button>
+    </div>
+  </form>
+</ion-content>

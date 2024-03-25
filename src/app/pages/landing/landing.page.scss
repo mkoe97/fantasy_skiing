@@ -1,0 +1,12 @@
+.ion-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .ion-button-container {
+    position: fixed;
+    bottom: calc(25% + 20px);
+    width: 100%;
+    text-align: center;
+  }

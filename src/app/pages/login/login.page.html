@@ -1,0 +1,33 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title">Wilkommen zurück</ion-title>
+    <p class="subtitle"> Melde dich hier an </p>
+  </div>
+
+  <form>
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input placeholder="Username oder Email" class="input" name="username_email" [(ngModel)]="username_email"></ion-input>
+          <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Passwort" class="input" name="password" [(ngModel)]="password" type="password"></ion-input>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div class="forgotpassword">
+        <a [routerLink]="['/reset-password']">Passwort Vergessen?</a>
+      </div>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div class="signuplink">
+        <p><a [routerLink]="['/signup']">Neuen Account erstellen</a></p>
+      </div>
+    </div>
+    <div class="ion-button-container">
+      <ion-button (click)="checkCredentials()">
+        Login
+      </ion-button>
+    </div>
+  </form>
+</ion-content>
